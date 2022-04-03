@@ -1,0 +1,97 @@
+body {
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+
+main, footer {
+    width: 70vw;
+    height: fit-content;
+    
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: rgba(255, 255, 255) 0px 0px 40px;
+
+    border-radius: 40px;
+    position: relative;
+    top: 20vh;
+
+    padding: 2%;
+}
+
+footer {
+    margin-top: 10vh;
+    width: 30vw;
+    padding: 1%;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    margin-left: 2vw;
+}
+
+img {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 20vw;
+    border-radius: 40px;
+    filter: blur(10px) grayscale(100%);
+}
+
+#playlist:hover img {
+    filter: blur(0px);
+    transition: filter 0.5s ease-in, box-shadow 0.5s ease-in;
+    box-shadow: black 0px 0px 30px;
+}
+
+#playlist:not(:hover) img {
+    filter: blur(10px) grayscale(100%);
+    transition: filter 0.5s ease-in;
+}
+
+#playlist {
+    position: relative;
+    float: left;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    margin-left: 2.5vw;
+}
+
+img:hover + #text {
+    display: block;
+    z-index: 3;
+}
+
+#text:hover {
+    display: block;
+}
+
+#text {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 20vw;
+    text-align: center;
+    z-index: 3;
+    color: white;
+    text-shadow: black 0px 0px 5px;
+    display: none;
+    font-size: 2.7vmax;
+    font-family: 'Comfortaa', cursive;
+}
+
+#title {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 4vh;
+    color: white;
+    text-shadow: black 0px 0px 10px;
+}
+
+svg {
+    height: 64px;
+    fill: white;
+    filter: drop-shadow(0px 0px 10px black);
+}
